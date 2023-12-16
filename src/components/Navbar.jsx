@@ -1,13 +1,13 @@
 const Navbar = () => {
   const navLinks = (
     <>
-      <li>
+      <li className="textShadow">
         <a href="">Home</a>
       </li>
-      <li>
+      <li className="textShadow">
         <a href="">About</a>
       </li>
-      <li>
+      <li className="textShadow">
         <a href="">Contact</a>
       </li>
     </>
@@ -34,7 +34,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 "
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52  "
           >
             {navLinks}
           </ul>
@@ -44,7 +44,7 @@ const Navbar = () => {
         </p>
       </div>
       <div className="navbar-end hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 text-lg">{navLinks}</ul>
+        <ul className="menu menu-horizontal px-1 text-lg ">{navLinks}</ul>
       </div>
     </div>
   );
