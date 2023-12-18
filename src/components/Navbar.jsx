@@ -2,13 +2,16 @@ const Navbar = () => {
   const navLinks = (
     <>
       <li className="textShadow">
-        <a href="">Home</a>
+        <a href="#">Home</a>
       </li>
       <li className="textShadow">
-        <a href="">About</a>
+        <a href="#skills">Skills</a>
       </li>
       <li className="textShadow">
-        <a href="">Contact</a>
+        <a href="#projects">Projects</a>
+      </li>
+      <li className="textShadow">
+        <a href="#contact">Contact</a>
       </li>
     </>
   );
@@ -34,7 +37,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52  "
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-[#161616] rounded-lg w-52  "
           >
             {navLinks}
           </ul>
