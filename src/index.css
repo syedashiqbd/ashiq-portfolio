@@ -8,3 +8,28 @@
 .textShadow:hover {
   text-shadow: 0px 0px 10px white;
 }
+
+.cursor-circle {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  background: #009e6750;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: 0.1s ease;
+}
+.cursor-dot {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: #009e66;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease;
+}

@@ -4,11 +4,29 @@ import Skills from '../components/Skills';
 import Projects from '../components/Projects';
 import Contact from '../components/Contact';
 import { FaFacebook, FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const Home = () => {
+  useEffect(() => {
+    let cursor_dot = document.querySelector('.cursor-dot');
+    let cursor_circle = document.querySelector('.cursor-circle');
+
+    document.addEventListener('mousemove', function (e) {
+      cursor_dot.style.cssText = cursor_circle.style.cssText =
+        'left: ' + e.clientX + 'px; top:' + e.clientY + 'px;';
+    });
+
+    // Cleanup event listener on component unmount
+    return () => {
+      document.removeEventListener('mousemove', () => {});
+    };
+  }, []);
+
   return (
     <div>
+      <div className="cursor-dot"></div>
+      <div className="cursor-circle"></div>
+
       <div className="lg:max-w-[1280px]  mx-auto  ">
         <Navbar></Navbar>
 
